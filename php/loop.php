@@ -1,4 +1,3 @@
-
 <!-- 
     $loop = 1 = "aku data ke- ".$i. "dan mendapat emas"
     $loop = 2 = "aku data ke- ".$i. "dan mendapat perak"
@@ -24,7 +23,7 @@ for ($i=0; $i <= $loop ; $i++) {
         echo "aku data ke-".$num++." dan aku mendapatkan hadiah tas laptop <br>";
     }elseif ($i >= 7 && $i <= 9) {
         echo "aku data ke-".$num++." dan aku mendapatkan hadiah tas karung <br>";
-    }else {
+    }elseif($i >= 10) {
         echo "aku data ke-".$num++." dan tidak mendapatkan hadiah apapun <br>";
     }
 }

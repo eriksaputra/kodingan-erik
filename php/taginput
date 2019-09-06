@@ -1,0 +1,7 @@
+tipe tag input 
+1. text -> untuk teks(huruf,angka,dan simbol)
+2. password -> untuk isian password
+3. email -> untuk isian email
+4. radio -> untuk pilihan radio hanya bisa memilih satu
+5. checkbox -> inputan untuk beberapa pilihan
+6. number -> untuk inputan angkat

@@ -78,7 +78,7 @@
         echo "<br>Status        : <b>$status   = Rp. $stts</b>";
         echo "<br>Jabatan       : <b>$jabatan  = Rp. $jbtn</b>";
         if(isset($_POST['bpjs'])) {
-            echo "<br><b>Potongan      : BPJS = Rp. $potongan1</b>";
+            echo "<b>Potongan      : BPJS = Rp. $potongan1</b>";
         }
         if(isset($_POST['koperasi'])) {
             echo "<b>, Koperasi = Rp. $potongan2</b>";

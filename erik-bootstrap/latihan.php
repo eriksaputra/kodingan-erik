@@ -47,52 +47,52 @@
 </nav>
 <!-- Akhir header -->
 <!-- content -->
-<div class="container-fluid">
-    <div class="row justify-content-left">
-        <div class="col-md-6" style="padding:20px;" >
-            <div class="card">
-                <div class="card-header"><center>FORMULIR Data diri</center></div>
-                <div class="card-body">
-                <form action="" method="POST">
-                <div class="form-group">
-                    <labe for="">Nama</labe>
-                    <input type="text" name="nama" class="form-control">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6" style="padding:20px;">
+                    <div class="card">
+                        <div class="card-header">Latihan</div>
+                        <div class="card-body">
+                            <form action="" method="POST">
+                            <div class="form-group">
+                                 <label for="">Nama</label>
+                                 <input type="text" name="nama" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Kelas</label>
+                                <input type="text" name="kelas" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" name="simpan" class="btn btn-primary btn-block">Simpan</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <labe for="">Kelas</labe>
-                    <input type="text" name="kls" class="form-control" rows="8">
-                  </div>
-                  <div class="form-group">
-                    <button type="submit" name="simpan" class="byn btn-success btn-block">Simpan</button>
-                  </div>
-                </form>
-          </div>
-     </div>
-  </div>
-                    <div class="col-md-6" style="padding:20px;" >
-                     <center>
-                        <h2>Output</h2>
-                     </center>
-                     <div class="table-responsive">
-                     <table class="table">
-                        <tr>
-                          <th>Nama</th>
-                          <th>Kelas</th>
-                        </tr>
-                        <?php
-                        if (isset($_POST['simpan'])) {
-                          $a = $_POST['nama'];
-                          $b = $_POST['kls'];
-                          ?>
-                          <tr>
-                            <td><?php echo $a; ?></td>
-                            <td><?php echo $b; ?></td>
-                          </tr>
-                        <?php } ?>
-                     </table>
-                     </div>
-                  </div>
-      
+                <div class="col-md-6" style="padding:20px;">
+                <div class="table-reponsive">
+                <table class="table">
+                <tr>
+                    <th>NAMA</th>
+                    <th>KELAS</th>
+                </tr>
+                <!-- php -->
+                <?php
+                if (isset($_POST['simpan'])) {
+                    $a = $_POST['nama'];
+                    $b = $_POST['kelas'];
+                ?>
+                <!-- end php -->
+                <tr>
+                    <td><?php echo $a; ?></td>
+                    <td><?php echo $b; ?></td>
+                </tr>
+                <?php } ?>
+                </table>
+                </div>
+                </div>
+            </div>
+        </div>
 <!-- end content -->
 <!-- footer -->
   <center>&copy; 2019 SMK ASSALAAM</center>

@@ -47,52 +47,54 @@
 </nav>
 <!-- Akhir header -->
 <!-- content -->
-<div class="container-fluid">
-    <div class="row justify-content-left">
-        <div class="col-md-6" style="padding:20px;" >
-            <div class="card">
-                <div class="card-header"><center>FORMULIR Data diri</center></div>
-                <div class="card-body">
-                <form action="" method="POST">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-6" style="padding:35px;" style="background-color:black;">
+                    <div class="card badge-primary">
+                        <div class="card-header"><center>FORMULIR DATA NILAI SISWA</center></div>
+                        <div class="card-body">
+                        <form action="coba2.php" method="POST">
+    <?php
+        if (isset($_GET['simpan'])) {
+           $jlm = $_GET['jumlah'];
+            for ($a=0; $a < $jlm ; $a++) { ?>
                 <div class="form-group">
                     <labe for="">Nama</labe>
-                    <input type="text" name="nama" class="form-control">
+                    <input type="text" name="nama[]" class="form-control">
                 </div>
                 <div class="form-group">
                     <labe for="">Kelas</labe>
-                    <input type="text" name="kls" class="form-control" rows="8">
-                  </div>
-                  <div class="form-group">
-                    <button type="submit" name="simpan" class="byn btn-success btn-block">Simpan</button>
-                  </div>
-                </form>
-          </div>
-     </div>
-  </div>
-                    <div class="col-md-6" style="padding:20px;" >
-                     <center>
-                        <h2>Output</h2>
-                     </center>
-                     <div class="table-responsive">
-                     <table class="table">
-                        <tr>
-                          <th>Nama</th>
-                          <th>Kelas</th>
-                        </tr>
-                        <?php
-                        if (isset($_POST['simpan'])) {
-                          $a = $_POST['nama'];
-                          $b = $_POST['kls'];
-                          ?>
-                          <tr>
-                            <td><?php echo $a; ?></td>
-                            <td><?php echo $b; ?></td>
-                          </tr>
-                        <?php } ?>
-                     </table>
-                     </div>
-                  </div>
-      
+                    <input type="text" name="kelas[]" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <labe for="">Jenis Kelamin</labe>
+                    <input type="radio" name="jk[]" value="Laki-laki"/>Laki-laki
+                    <input type="radio" name="jk[]" value="Perempuan" 
+                    checked="checked"/>Perempuan
+                </div>
+                <div class="form-group">
+                    <labe for="">Nilai UTS</labe>
+                    <input type="number" min="1" max="100" name="uts[]" class="form-control">
+                </div>
+                <div class="form-group">
+                    <labe for="">Nilai UAS</labe>
+                    <input type="number" min="1" max="100" name="uas[]" class="form-control">
+                </div>
+                <div class="form-group">
+                    <labe for="">Nilai Harian</labe>
+                    <input type="number" min="1" max="100" name="hari[]" class="form-control">
+                </div>
+                 <?php } ?>
+                 <center>   
+            <input type="submit" name="sbm" class="btn btn-success" value="Simpan">
+            <input type="reset" value="Reset" class="btn btn-danger">
+            </center>
+            </form>      
+           <?php } ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
 <!-- end content -->
 <!-- footer -->
   <center>&copy; 2019 SMK ASSALAAM</center>

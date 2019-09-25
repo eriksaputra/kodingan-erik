@@ -47,52 +47,28 @@
 </nav>
 <!-- Akhir header -->
 <!-- content -->
-<div class="container-fluid">
-    <div class="row justify-content-left">
-        <div class="col-md-6" style="padding:20px;" >
-            <div class="card">
-                <div class="card-header"><center>FORMULIR Data diri</center></div>
-                <div class="card-body">
-                <form action="" method="POST">
-                <div class="form-group">
-                    <labe for="">Nama</labe>
-                    <input type="text" name="nama" class="form-control">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-6" style="padding:20px;">
+                <div class="card badge-danger">
+                    <div class="a">
+                    <div class="card-header"><center>FORMULIR SISWA SMK ASSALAAM</center></div>
+                    </div>
+                    <div class="card-body">
+    <form action="coba1.php" method="GET">
+    <div class="form-group">
+        <center><label for="">Masukan jumlah siswa</label></center>
+        <input type="number" min="1" name="jumlah" class="form-control" required>
+</div>
+    <div class="form-group">
+        <button type="submit" name="simpan" class="btn btn-success btn-block">Simpan</button>
+    </div>
+    </form>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <labe for="">Kelas</labe>
-                    <input type="text" name="kls" class="form-control" rows="8">
-                  </div>
-                  <div class="form-group">
-                    <button type="submit" name="simpan" class="byn btn-success btn-block">Simpan</button>
-                  </div>
-                </form>
-          </div>
-     </div>
-  </div>
-                    <div class="col-md-6" style="padding:20px;" >
-                     <center>
-                        <h2>Output</h2>
-                     </center>
-                     <div class="table-responsive">
-                     <table class="table">
-                        <tr>
-                          <th>Nama</th>
-                          <th>Kelas</th>
-                        </tr>
-                        <?php
-                        if (isset($_POST['simpan'])) {
-                          $a = $_POST['nama'];
-                          $b = $_POST['kls'];
-                          ?>
-                          <tr>
-                            <td><?php echo $a; ?></td>
-                            <td><?php echo $b; ?></td>
-                          </tr>
-                        <?php } ?>
-                     </table>
-                     </div>
-                  </div>
-      
+            </div>
+        </div>
+    </div>
 <!-- end content -->
 <!-- footer -->
   <center>&copy; 2019 SMK ASSALAAM</center>
